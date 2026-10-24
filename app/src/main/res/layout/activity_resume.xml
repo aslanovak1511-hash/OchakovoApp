@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/ochakovo_gray">
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="24dp">
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Анкета соискателя" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/ochakovo_red" android:layout_marginBottom="16dp"/>
+
+        <!-- ФИО раздельно -->
+        <EditText android:id="@+id/etSurname" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Фамилия" android:inputType="textPersonName" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+
+        <EditText android:id="@+id/etName" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Имя" android:inputType="textPersonName" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="8dp"/>
+
+        <EditText android:id="@+id/etPatronymic" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Отчество" android:inputType="textPersonName" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Телефон (без Telegram) -->
+        <EditText android:id="@+id/etPhone" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:hint="Номер телефона" android:inputType="phone" android:background="@color/white" android:padding="12dp" android:layout_marginBottom="16dp"/>
+
+        <!-- Город -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Выбери город:" android:layout_marginBottom="8dp"/>
+        <Spinner android:id="@+id/spinnerCity" android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white" android:layout_marginBottom="16dp"/>
+
+        <!-- Вакансия -->
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Желаемая вакансия:" android:layout_marginBottom="8dp"/>
+        <Spinner android:id="@+id/spinnerVacancy" android:layout_width="match_parent" android:layout_height="48dp" android:background="@color/white" android:layout_marginBottom="24dp"/>
+
+        <Button android:id="@+id/btnSend" android:layout_width="match_parent" android:layout_height="56dp"
+            android:text="ОТПРАВИТЬ АНКЕТУ" android:textStyle="bold" android:textColor="@color/white" android:backgroundTint="@color/ochakovo_red"/>
+    </LinearLayout>
+</ScrollView>

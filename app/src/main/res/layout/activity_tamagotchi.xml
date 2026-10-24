@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:background="@color/ochakovo_gray">
+
+    <!-- 1. Шкала роста (сверху) -->
+    <LinearLayout
+        android:id="@+id/llTopBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView android:id="@+id/tvLevelNumber" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="1" android:textSize="24sp" android:textStyle="bold" android:textColor="@color/ochakovo_red" android:layout_marginEnd="8dp"/>
+
+        <SeekBar android:id="@+id/progressBarGrowth" android:layout_width="0dp" android:layout_height="wrap_content"
+            android:layout_weight="1" android:max="100" android:progress="0" android:thumb="@drawable/ic_ochakovo_logo"
+            android:progressTint="@color/ochakovo_red" android:progressBackgroundTint="@color/ochakovo_dark" android:splitTrack="false"/>
+    </LinearLayout>
+
+    <!-- 2. Кнопки -->
+    <LinearLayout
+        android:id="@+id/llButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/llTopBar"
+        app:layout_constraintBottom_toTopOf="@id/llCharacterBlock"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <Button android:id="@+id/btnAction1" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Продолжить" android:backgroundTint="@color/ochakovo_red" android:textColor="@color/white" android:layout_marginBottom="8dp"/>
+
+        <Button android:id="@+id/btnGoToResume" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="📝 Заполнить анкету" android:backgroundTint="@color/ochakovo_dark" android:textColor="@color/white"
+            android:visibility="gone" android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/btnChooseLevel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:layout_marginEnd="8dp"
+                android:text="🎮 Уровни"
+                android:backgroundTint="@color/ochakovo_green"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="🚪 Выйти"
+                android:backgroundTint="#A2AAAD"
+                android:textColor="@color/ochakovo_dark"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- 3. Блок с текстом и Квасенком -->
+    <LinearLayout
+        android:id="@+id/llCharacterBlock"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="bottom"
+        android:padding="16dp"
+        app:layout_constraintTop_toBottomOf="@id/llButtons"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintVertical_chainStyle="packed">
+
+        <TextView android:id="@+id/tvDialog" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Привет! Я Квасенок. Поможешь мне?" android:textSize="18sp" android:textColor="@color/ochakovo_dark"
+            android:gravity="center" android:background="@drawable/bg_dialog" android:padding="16dp" android:layout_marginBottom="8dp"/>
+
+        <!-- ГЛАВНЫЙ ЭКРАН: kvasenok2, увеличенный размер -->
+        <ImageView
+            android:id="@+id/imgKvasenok"
+            android:layout_width="match_parent"
+            android:layout_height="350dp"
+            android:src="@drawable/kvasenok2"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"/>
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

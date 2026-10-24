@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="Очаково"
+        android:theme="@style/Theme.Material3.DayNight.NoActionBar">
+
+        <!-- Главный экран (Вход) -->
+        <activity android:name=".LoginActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".TamagotchiActivity" />
+        <activity android:name=".Level1BottleActivity" />
+        <activity android:name=".Level2BottleActivity" />
+        <activity android:name=".Level3RunnerActivity" />
+        <activity android:name=".Level4MemoryActivity" />
+        <activity android:name=".Level5CrocodileActivity" />
+        <activity android:name=".ResumeActivity" />
+        <activity android:name=".ResultActivity" />
+        <activity android:name=".DialogActivity" />
+    </application>
+</manifest>

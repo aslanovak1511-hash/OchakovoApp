@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/ochakovo_gray">
+
+    <TextView android:id="@+id/tvScore" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Собрано: 0/10" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/ochakovo_red"
+        android:layout_margin="16dp" app:layout_constraintTop_toTopOf="parent" app:layout_constraintStart_toStartOf="parent"/>
+
+    <!-- Земля -->
+    <View android:id="@+id/track" android:layout_width="match_parent" android:layout_height="60dp"
+        android:background="@color/ochakovo_dark" app:layout_constraintBottom_toBottomOf="parent"/>
+
+    <!-- Игровое поле для ингредиентов -->
+    <FrameLayout
+        android:id="@+id/gameField"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/tvScore"
+        app:layout_constraintBottom_toTopOf="@id/track">
+
+        <!-- Акула -->
+        <ImageView
+            android:id="@+id/tvPlayer"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:src="@drawable/baron"
+            android:scaleType="centerCrop"
+            android:layout_gravity="bottom|start"
+            android:layout_marginStart="32dp"
+            android:layout_marginBottom="0dp"/>
+    </FrameLayout>
+
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Тапай, чтобы Акула подпрыгивала!" android:textSize="16sp" android:background="#AAFFFFFF" android:padding="8dp"
+        app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintStart_toStartOf="parent" app:layout_constraintEnd_toEndOf="parent" android:layout_marginBottom="16dp"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

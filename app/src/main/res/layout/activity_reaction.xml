@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:background="@color/ochakovo_gray" android:padding="16dp" android:gravity="center">
+
+    <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="Ай-Ай: Нажми на правильную склянку 15 раз!" android:textSize="20sp" android:textStyle="bold" android:textColor="@color/ochakovo_dark" android:layout_marginBottom="32dp" android:gravity="center"/>
+
+    <GridLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:columnCount="2">
+        <Button android:id="@+id/btn1" android:layout_width="150dp" android:layout_height="80dp" android:text="🧪" android:textSize="32sp" android:layout_margin="8dp"/>
+        <Button android:id="@+id/btn2" android:layout_width="150dp" android:layout_height="80dp" android:text="⚗️" android:textSize="32sp" android:layout_margin="8dp"/>
+        <Button android:id="@+id/btn3" android:layout_width="150dp" android:layout_height="80dp" android:text="🧫" android:textSize="32sp" android:layout_margin="8dp"/>
+        <Button android:id="@+id/btn4" android:layout_width="150dp" android:layout_height="80dp" android:text="🧬" android:textSize="32sp" android:layout_margin="8dp"/>
+    </GridLayout>
+</LinearLayout>

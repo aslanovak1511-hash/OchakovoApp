@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical" android:padding="24dp" android:gravity="center" android:background="@color/ochakovo_red">
+
+    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+        android:text="ОЧАКОВО\nТвоя карьера" android:textColor="@color/white" android:textSize="28sp"
+        android:textStyle="bold" android:gravity="center" android:layout_marginBottom="32dp"/>
+
+    <EditText android:id="@+id/etLogin" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Логин" android:background="@color/white" android:padding="16dp" android:layout_marginBottom="8dp"/>
+
+    <EditText android:id="@+id/etPass" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:hint="Пароль" android:inputType="textPassword" android:background="@color/white" android:padding="16dp" android:layout_marginBottom="24dp"/>
+
+    <Button android:id="@+id/btnLogin" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Войти" android:textColor="@color/ochakovo_red" android:backgroundTint="@color/white" android:layout_marginBottom="8dp"/>
+
+    <Button android:id="@+id/btnGoRegister" android:layout_width="match_parent" android:layout_height="wrap_content"
+        android:text="Регистрация" android:textColor="@color/white" android:backgroundTint="@color/ochakovo_green"/>
+</LinearLayout>
